@@ -1,0 +1,258 @@
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    background-color: #333;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+  }
+  
+  nav a:hover, nav a.active {
+    background-color: #555;
+  }
+
+  .summary-cards {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    background-color: lightgrey;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    padding: 1rem;
+    width: 30%;
+    text-align: center;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    padding: 1rem;
+  }
+  
+  label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  input[type="text"], input[type="email"], input[type="password"], input[type="checkbox"] {
+    margin-left: 0.5rem;
+  }
+  
+  button {
+    grid-column: 2;
+    padding: 0.5rem 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .alert {
+    background-color: #f8f9fa;
+    border-left: 5px solid #007bff;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+  }
+  
+  .support-container {
+    padding: 1rem;
+  }
+  
+  .faq-list {
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .faq-item {
+    background: #f9f9f9;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-left: 3px solid #007bff;
+  }
+  
+  .content-container {
+    display: flex;
+    flex-wrap: wrap;  /* Allows items to wrap onto the next line if needed */
+  }
+  
+  .home-graphs {
+    flex: 1 1 50%;  /* Grow and shrink from base of 50% */
+    min-width: 300px;  /* Prevents the components from being too small */
+    padding: 20px;
+    box-sizing: border-box;  /* Includes padding in the element's total width and height */
+  }
+
+  .home-alerts {
+    flex: 1 1 50%;  /* Grow and shrink from base of 50% */
+    min-width: 300px;  /* Prevents the components from being too small */
+    padding: 20px;
+    margin-left: 30px;  /* Increased left margin to move the alerts right */
+    box-sizing: border-box;  /* Includes padding in the element's total width and height */
+  }
+  
+  @media (max-width: 768px) {
+    .home-graphs, .home-alerts {
+      flex: 1 1 100%;  /* Each component takes full width on smaller screens */
+      margin-left: 0;  /* Removes the left margin on smaller screens */
+    }
+  }
+  /* Styling for nav, summary-cards, form, and other components remains unchanged */
+
+.content-container {
+  display: flex;
+  justify-content: space-between; /* Ensures items are spaced out to each end */
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.financial-graphs, .recent-alerts {
+  flex: 1; /* Makes each child take equal space */
+  background: white; /* Background color for clarity */
+  padding: 20px; /* Padding around the content */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-bottom: 20px;
+}
+
+.financial-graphs {
+  margin-right: 10px; /* Right margin to separate from the alerts section */
+}
+
+.recent-alerts {
+  margin-left: 10px; /* Left margin to separate from the financial graphs */
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column; /* Stack the children vertically on smaller screens */
+  }
+
+  .financial-graphs, .recent-alerts {
+    flex: 1 1 100%; /* Each component takes full width on smaller screens */
+    margin: 0; /* Reset margins to ensure full width utilization */
+    margin-bottom: 20px; /* Adds bottom margin for spacing between components */
+  }
+}
+
+/* Styling for FinancialChart */
+
+.financial-graphs .LineChart {
+  background-color: #f4f4f9; /* Light background inside the chart for contrast */
+}
+
+/* Customize Line colors */
+.line-revenue {
+  stroke: #ff6384; /* Vibrant pink for revenue */
+}
+
+.line-profit {
+  stroke: #36a2eb; /* Bright blue for profit */
+}
+.alert {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.button-container {
+  display: flex;
+  gap: 10px;
+}
+.button-container button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+.warning.high button {
+  background-color: #721c24;
+}
+
+.success.medium button {
+  background-color: #155724;
+}
+
+.info.low button, .info.medium button {
+  background-color: #0c5460;
+}
+
+.alert.warning.high {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-color: #f5c6cb;
+}
+.alert.success.medium {
+  background-color: #d4edda;
+  color: #155724;
+  border-color: #c3e6cb;
+}
+.alert.info.low {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border-color: #bee5eb;
+}
+.alert.info.medium {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border-color: #bee5eb;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.warning.high {
+  background-color: #f8d7da;
+}
+.success.medium {
+  background-color: #d4edda;
+}
+.info.low {
+  background-color: #d1ecf1;
+}
+.info.medium {
+  background-color: #d1ecf1;
+}
+
+.alert-legend {
+  margin-top: 20px;
+}
+.support-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-container {
+  width: 50%;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Example shadow for the container */
+}
+
+.contact-container form input {
+  width: 100%;  /* Ensures full width within the form */
+  box-sizing: border-box;  /* Includes padding and border in the element's total width */
+  margin-bottom: 10px;  /* Adds space between the form elements */
+  margin-left: 50;
+}
