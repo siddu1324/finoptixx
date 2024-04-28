@@ -36,20 +36,30 @@ const ScenarioPlanning = () => {
     handleAskClick();
   };
 
+  const handleClearChat = () => {
+    setResponse('');
+  };
+
   return (
     <div className="chat-interface">
-      <h1>Scenario Planning</h1>
-      <input
-        type="text"
-        value={question}
-        onChange={handleQuestionChange}
-        placeholder="Ask a 'what-if' question"
-      />
-      <button onClick={handleAskClick}>Ask</button>
-      <div className="response">{response}</div>
-      <div className="presets">
+      <h1 className="scenario-chat-header">Scenario Planning</h1>
+      <div className="scenario-chat-container">
+        <input
+          className="scenario-chat-input"
+          type="text"
+          value={question}
+          onChange={handleQuestionChange}
+          placeholder="Ask a 'what-if' question"
+        />
+        <button className="scenario-chat-submit" onClick={handleAskClick}>Ask</button>
+        <button className="scenario-chat-clear" onClick={handleClearChat}>Clear</button>
+      </div>
+      <div className="scenario-chat-messages">
+        <div className={response ? "bot message" : ""}>{response}</div>
+      </div>
+      <div className="scenario-chat-suggestions">
         {scenarioQuestions.map((q, index) => (
-          <button key={index} onClick={() => handlePresetQuestion(q)}>{q}</button>
+          <button className="suggestion-button" key={index} onClick={() => handlePresetQuestion(q)}>{q}</button>
         ))}
       </div>
     </div>
