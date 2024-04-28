@@ -1,25 +1,83 @@
-# FinOptiX
+# FinOptiX :chart_with_upwards_trend:
 
-**FinOptiX** is a cutting-edge financial analytics platform that leverages machine learning to provide predictive insights and prescriptive recommendations, enhancing financial decision-making for small to medium-sized enterprises.
+**FinOptiX** is a state-of-the-art financial analytics platform specifically designed to empower small to medium-sized enterprises (SMEs) with advanced financial decision-making tools. Using machine learning techniques, FinOptiX delivers predictive insights and prescriptive recommendations, enabling businesses to navigate financial complexities with precision and insight.
 
-***FinOptiX***: Advanced Financial Forecasting Platform
+## Features :sparkles:
 
-***FinOptiX*** is a comprehensive financial analytics platform designed to empower small to medium-sized enterprises (*SMEs*) with predictive and prescriptive insights into their financial operations. Leveraging state-of-the-art machine learning models, FinOptiX offers capabilities for **revenue forecasting**, **expense tracking**, and **financial risk management**, integrated into a user-friendly interface.
+- **Predictive Financial Analytics**: Leverages deep learning and statistical models to forecast future financial trends and conditions.
+- **Prescriptive Insights**: Provides data-driven strategies and actions to improve financial outcomes and operational efficiency.
+- **Interactive Dashboards**: Features dynamic and intuitive dashboards that present financial data and analytics in real-time.
+- **Custom Scenario Planning**: Allows users to simulate different financial scenarios to predict outcomes and plan accordingly.
 
-**Key Features**: Predictive Financial Analytics: Utilizes historical data to forecast future financial conditions, aiding strategic planning and decision-making.
+## Project Structure :file_folder:
 
-**Prescriptive Insights**: Offers actionable guidance to optimize financial performance based on predictive outcomes.
+- `/client`: Contains all the front-end code built with React, responsible for rendering interactive UI components and visualizations.
+- `/`: The root directory contains the back-end code, utilizing Node.js with Express to handle API requests, data processing, and integration with Python machine learning models.
 
-**Interactive Dashboards**: Dynamic, real-time visualizations of financial data that facilitate quick and informed decisions.
+## Technologies :computer:
 
-**Custom Scenario Planning**: Allows users to simulate various financial scenarios to understand potential impacts before making critical financial decisions.
+- **Backend**: Node.js with Express for handling API services, situated in the root directory.
+- **Frontend**: React, located in the `client` folder, to create a responsive and interactive user interface.
+- **Machine Learning**: Python, used to build and run sophisticated financial models.
 
-## Technologies
+## Getting Started :rocket:
 
-**Backend**: Node.js with Express for RESTful API services.
+These instructions will guide you through setting up the project on your local machine for development and testing purposes.
 
-**Frontend**: React for a responsive and interactive user interface.
+### Prerequisites
 
-**Machine Learning**: Python-based models for financial prediction and analysis, integrated using a robust data processing pipeline.
+Before you begin, ensure you have the following software installed:
+- Node.js
+- npm (comes with Node.js)
+- Python 3
+- React.js
 
-This platform aims to reduce financial uncertainties and enhance decision-making for businesses looking to thrive in a dynamic economic landscape.
+### Installation
+
+Follow these steps to get your development environment running:
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/FinOptiX.git
+cd FinOptiX
+```
+
+Install backend dependencies:
+```bash
+Copy code
+npm install
+```
+Navigate to the client directory and install frontend dependencies:
+```bash
+cd client
+npm install
+cd ..
+```
+Install Python dependencies:
+```bash
+pip install -r requirements.txt
+Running the Application
+To run both frontend and backend servers simultaneously:
+```
+Start the backend server from the root directory:
+```bash
+node server.mjs
+```
+In another terminal, navigate to the client directory and start the React application:
+```bash
+cd client
+npm start
+```
+Both services will run concurrently, with the frontend accessible through http://localhost:3000 and the backend handling API requests(http://localhost:5001).
+
+Contributing :handshake:
+We encourage contributions from the community. Here are our main contributors:
+
+Medhani Kalal
+Kashish Tandon
+Kunal Singh
+Siddhartha Reddy Pullanmagari
+Omair Syed
+Venkat Sai Manikanta Grandhe
+
+Project Link: https://github.com/siddu1324/finoptixx
