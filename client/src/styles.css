@@ -23,6 +23,7 @@ nav {
   }
   
   .card {
+    color: black;
     border: 1px solid #ccc;
     background-color: lightgrey;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
@@ -238,6 +239,7 @@ nav {
 
 .alert-legend {
   margin-top: 20px;
+  color : black;
 }
 .support-container {
   display: flex;
@@ -277,10 +279,12 @@ nav {
 
 .accordion-title {
   font-weight: bold;
+  color: black;
 }
 
 .accordion-content {
   padding-top: 10px;
+  color: black;
 }
 
 .contact-form {
@@ -306,4 +310,11 @@ nav {
 
 .form-button:hover {
   background-color: #0056b3;
+}
+
+.csv-upload{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }

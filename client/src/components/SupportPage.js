@@ -11,7 +11,7 @@ const SupportPage = () => {
   return (
     <div className="support-page">
       <div className="faq-container">
-        <h1>Frequently Asked Questions</h1>
+        <h2>Frequently Asked Questions</h2>
         <div className="accordion">
           <div className="accordion-item" onClick={() => handleToggle(0)}>
             <div className="accordion-title">How do I reset my password?</div>

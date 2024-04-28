@@ -31,6 +31,7 @@ function LoginPage() {
   };
 
   const formStyle = {
+    color: 'black',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -40,14 +41,15 @@ function LoginPage() {
     boxShadow: '0 0 10px rgba(0,0,0,0.1)',
     backgroundColor: 'white',
     margin: 'auto',
-    width: '300px'
+    width: '500px',
+    height: '500px'
   };
 
   const inputStyle = {
     padding: '10px',
-    margin: '10px 0',
+    margin: '10px 2px',
     display: 'block',
-    width: '100%',
+    width: '80%',
     boxSizing: 'border-box'
   };
 
@@ -58,7 +60,7 @@ function LoginPage() {
     margin: '8px 0',
     border: 'none',
     cursor: 'pointer',
-    width: '100%',
+    width: '90%',
     opacity: '0.9'
   };
 
