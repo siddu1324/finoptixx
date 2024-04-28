@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import "../styles.css"; 
 
 const ReportsPage = () => {
@@ -8,19 +8,33 @@ const ReportsPage = () => {
   ]);
 
   const handleGenerateReport = () => {
-    // This function would generate a new report.
+    // Function to generate a new report
     const newReport = { id: reports.length + 1, title: `New Report ${reports.length + 1}` };
     setReports([...reports, newReport]);
     console.log('Generating new report...');
   };
 
+  // Replace your current handleDownload function with this one
   const handleDownload = (reportId) => {
-    // This function would handle the download logic.
-    console.log('Downloading report with ID:', reportId);
+    const report = reports.find(r => r.id === reportId);
+    fetch(`/path-to-reports/${reportId}`) // Make sure to have the correct server endpoint here
+      .then(response => response.blob())
+      .then(blob => {
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.style.display = 'none';
+        a.href = url;
+        a.download = `${report.title}.pdf`; // Set the file name for the download
+        document.body.appendChild(a);
+        a.click();
+        window.URL.revokeObjectURL(url);
+        alert(`${report.title} downloaded.`);
+      })
+      .catch(() => alert('Error in downloading the report'));
   };
 
   return (
-    <div>
+    <div className="reports-container">
       <h1>Reports</h1>
       <button onClick={handleGenerateReport}>Generate New Report</button>
       <ul>
