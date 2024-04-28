@@ -22,8 +22,7 @@ function LoginPage() {
 
       const data = await response.json();
       console.log('Login successful:', data.token);
-      // Redirect to the dashboard page or handle the token (e.g., save it in local storage)
-      window.location.href = '/';  // Adjust the URL as needed
+      window.location.href = '/';  
     } catch (error) {
       console.error('Error:', error);
       alert('Login failed: ' + error.message);
@@ -31,6 +30,7 @@ function LoginPage() {
   };
 
   const formStyle = {
+    backgroundColor: 'lightgrey',
     color: 'black',
     display: 'flex',
     flexDirection: 'column',
@@ -39,10 +39,13 @@ function LoginPage() {
     padding: '20px',
     borderRadius: '8px',
     boxShadow: '0 0 10px rgba(0,0,0,0.1)',
-    backgroundColor: 'white',
     margin: 'auto',
-    width: '500px',
-    height: '500px'
+    marginTop: '50vh', 
+    transform: 'translateY(-50%)', 
+    width: '300px',
+    height: '300px',
+    marginLeft: 'auto', 
+    marginRight: '200px' 
   };
 
   const inputStyle = {
@@ -54,7 +57,7 @@ function LoginPage() {
   };
 
   const buttonStyle = {
-    backgroundColor: '#4CAF50',
+    backgroundColor: 'purple',
     color: 'white',
     padding: '14px 20px',
     margin: '8px 0',
@@ -64,8 +67,28 @@ function LoginPage() {
     opacity: '0.9'
   };
 
+  const lineStyle = {
+    position: 'absolute',
+    width: '1px',
+    height: '100%', 
+    backgroundColor: 'white',
+    left: '-50%', 
+    transform: 'translateX(-50%)', 
+  };
+
+  const imageStyle = {
+    position: 'absolute',
+    left: '130px', 
+    top: '50%', 
+    transform: 'translateY(-50%)',
+    width: '400px',
+    height: '300px',
+    
+  };
+
   return (
-    <div style={{backgroundImage: "url('/background.jpeg')",  display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', backgroundColor: '#f4f4f4' }}>
+    <div style={{backgroundColor: '#000',  display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh'}}>
+      <img src="/logo.png" alt="Your Image" style={imageStyle} />
       <form onSubmit={handleLogin} style={formStyle}>
         <label htmlFor="username">Username:</label>
         <input
@@ -86,6 +109,7 @@ function LoginPage() {
           required
         />
         <button type="submit" style={buttonStyle}>Login</button>
+        <div style={lineStyle}></div> {}
       </form>
     </div>
   );
