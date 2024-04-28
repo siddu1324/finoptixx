@@ -1,83 +1,70 @@
-# FinOptiX :chart_with_upwards_trend:
+# Getting Started with Create React App
 
-**FinOptiX** is a state-of-the-art financial analytics platform specifically designed to empower small to medium-sized enterprises (SMEs) with advanced financial decision-making tools. Using machine learning techniques, FinOptiX delivers predictive insights and prescriptive recommendations, enabling businesses to navigate financial complexities with precision and insight.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Features :sparkles:
+## Available Scripts
 
-- **Predictive Financial Analytics**: Leverages deep learning and statistical models to forecast future financial trends and conditions.
-- **Prescriptive Insights**: Provides data-driven strategies and actions to improve financial outcomes and operational efficiency.
-- **Interactive Dashboards**: Features dynamic and intuitive dashboards that present financial data and analytics in real-time.
-- **Custom Scenario Planning**: Allows users to simulate different financial scenarios to predict outcomes and plan accordingly.
+In the project directory, you can run:
 
-## Project Structure :file_folder:
+### `npm start`
 
-- `/client`: Contains all the front-end code built with React, responsible for rendering interactive UI components and visualizations.
-- `/`: The root directory contains the back-end code, utilizing Node.js with Express to handle API requests, data processing, and integration with Python machine learning models.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Technologies :computer:
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-- **Backend**: Node.js with Express for handling API services, situated in the root directory.
-- **Frontend**: React, located in the `client` folder, to create a responsive and interactive user interface.
-- **Machine Learning**: Python, used to build and run sophisticated financial models.
+### `npm test`
 
-## Getting Started :rocket:
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-These instructions will guide you through setting up the project on your local machine for development and testing purposes.
+### `npm run build`
 
-### Prerequisites
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Before you begin, ensure you have the following software installed:
-- Node.js
-- npm (comes with Node.js)
-- Python 3
-- React.js
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### Installation
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Follow these steps to get your development environment running:
+### `npm run eject`
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/FinOptiX.git
-cd FinOptiX
-```
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-Install backend dependencies:
-```bash
-Copy code
-npm install
-```
-Navigate to the client directory and install frontend dependencies:
-```bash
-cd client
-npm install
-cd ..
-```
-Install Python dependencies:
-```bash
-pip install -r requirements.txt
-Running the Application
-To run both frontend and backend servers simultaneously:
-```
-Start the backend server from the root directory:
-```bash
-node server.mjs
-```
-In another terminal, navigate to the client directory and start the React application:
-```bash
-cd client
-npm start
-```
-Both services will run concurrently, with the frontend accessible through http://localhost:3000 and the backend handling API requests(http://localhost:5001).
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Contributing :handshake:
-We encourage contributions from the community. Here are our main contributors:
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-Medhani Kalal
-Kashish Tandon
-Kunal Singh
-Siddhartha Reddy Pullanmagari
-Omair Syed
-Venkat Sai Manikanta Grandhe
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-Project Link: https://github.com/siddu1324/finoptixx
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
