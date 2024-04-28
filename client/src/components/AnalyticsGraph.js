@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import Papa from 'papaparse';
+import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
 const data = [
@@ -23,32 +22,20 @@ const data = [
   { month: 'June', sales: null, forecast: 1750 },
 ];
 
-const SalesChart = () => {
-  const [chartData, setChartData] = useState([]);
-
-  const handleFileUpload = (event) => {
-    const file = event.target.files[0];
-    Papa.parse(file, {
-      complete: (results) => {
-        setChartData(results.data);
-      },
-      header: true,
-      dynamicTyping: true,
-    });
-  };
-
-
+const SalesChart = ({ showGraph }) => {
   return (
     <div>
-  	<LineChart width={800} height={400} data={data}>
-      <XAxis dataKey="month" />
-      <YAxis />
-      <CartesianGrid strokeDasharray="3 3" />
-      <Tooltip />
-      <Legend />
-      <Line type="monotone" dataKey="sales" stroke="#8884d8" activeDot={{ r: 8 }} />
-      <Line type="monotone" dataKey="forecast" stroke="#82ca9d" strokeDasharray="5 5" />
-    </LineChart>
+      {showGraph && (
+        <LineChart width={800} height={400} data={data}>
+          <XAxis dataKey="month" />
+          <YAxis />
+          <CartesianGrid strokeDasharray="3 3" />
+          <Tooltip />
+          <Legend />
+          <Line type="monotone" dataKey="sales" stroke="#8884d8" activeDot={{ r: 8 }} />
+          <Line type="monotone" dataKey="forecast" stroke="#82ca9d" strokeDasharray="5 5" />
+        </LineChart>
+      )}
     </div>
   );
 };
