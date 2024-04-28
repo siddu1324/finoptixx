@@ -1,29 +1,35 @@
-import React, { useState } from 'react';
-import { UploadWidget } from '@bytescale/upload-widget';
+import React, { useCallback } from 'react';
+import { useDropzone } from 'react-dropzone';
 
 const FileUpload = ({ onFileUpload }) => {
-  const handleUpload = () => {
-    const options = {
-      apiKey: "free",  // Make sure to replace "free" with your actual API key
-      maxFileCount: 1,
-      // mimeTypes: ["image/*"], // Uncomment if you need to restrict to images
+  const onDrop = useCallback(acceptedFiles => {
+    const file = acceptedFiles[0];
+    const reader = new FileReader();
+
+    reader.onabort = () => console.log('File reading was aborted');
+    reader.onerror = () => console.log('File reading has failed');
+    reader.onload = () => {
+      const csvData = reader.result;
+      onFileUpload(csvData);
     };
 
-    UploadWidget.open(options).then(
-      files => {
-        if (files.length > 0) {
-          onFileUpload();
-        }
-      },
-      error => {
-        alert(error);
-      }
-    );
-  };
+    reader.readAsText(file);
+  }, [onFileUpload]);
+
+  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+    onDrop,
+    accept: 'text/csv',
+    multiple: false,
+  });
 
   return (
-    <div>
-      <button onClick={handleUpload}>Upload File</button>
+    <div {...getRootProps()}>
+      <input {...getInputProps()} />
+      {isDragActive ? (
+        <p>Drop the CSV file here...</p>
+      ) : (
+        <p>Drag and drop a CSV file here, or click to select a file</p>
+      )}
     </div>
   );
 };
